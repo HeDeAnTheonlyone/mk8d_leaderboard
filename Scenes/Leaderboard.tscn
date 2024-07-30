@@ -1,0 +1,98 @@
+[gd_scene load_steps=5 format=3 uid="uid://c46q8oswsk2fv"]
+
+[ext_resource type="Script" path="res://Scripts/SceneScript/Leaderboard.cs" id="1_nrwcd"]
+[ext_resource type="Texture2D" uid="uid://cdrx34x5g0vbe" path="res://Assets/MainBg.jpg" id="1_xv7uf"]
+[ext_resource type="PackedScene" uid="uid://jeaouqjwtnr1" path="res://Objects/CourseImage.tscn" id="3_ue21b"]
+[ext_resource type="PackedScene" uid="uid://cswhjgmgak7aq" path="res://Objects/MenuButton.tscn" id="5_nmqda"]
+
+[node name="Leaderboard" type="CanvasLayer"]
+script = ExtResource("1_nrwcd")
+
+[node name="Bg" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+texture = ExtResource("1_xv7uf")
+expand_mode = 2
+
+[node name="BgOverlay" type="ColorRect" parent="Bg"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.137255)
+
+[node name="CourseSplitter" type="HSplitContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+dragger_visibility = 1
+
+[node name="CourseImageList" type="VBoxContainer" parent="CourseSplitter"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="CourseImage0" parent="CourseSplitter/CourseImageList" instance=ExtResource("3_ue21b")]
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="CourseImage1" parent="CourseSplitter/CourseImageList" instance=ExtResource("3_ue21b")]
+layout_mode = 2
+
+[node name="CourseImage2" parent="CourseSplitter/CourseImageList" instance=ExtResource("3_ue21b")]
+layout_mode = 2
+
+[node name="CourseImage3" parent="CourseSplitter/CourseImageList" instance=ExtResource("3_ue21b")]
+layout_mode = 2
+
+[node name="ButtonSplitter" type="VSplitContainer" parent="CourseSplitter"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Buttonsmargin" type="MarginContainer" parent="CourseSplitter/ButtonSplitter"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 30
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CourseSplitter/ButtonSplitter/Buttonsmargin"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 30
+
+[node name="MenuButton" parent="CourseSplitter/ButtonSplitter/Buttonsmargin/HBoxContainer" instance=ExtResource("5_nmqda")]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Label" parent="CourseSplitter/ButtonSplitter/Buttonsmargin/HBoxContainer/MenuButton/TextMargine" index="0"]
+text = "next_round"
+
+[node name="LeaderboardMargin" type="MarginContainer" parent="CourseSplitter/ButtonSplitter"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_bottom = 10
+
+[node name="Scroll" type="ScrollContainer" parent="CourseSplitter/ButtonSplitter/LeaderboardMargin"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="LeaderboardList" type="VBoxContainer" parent="CourseSplitter/ButtonSplitter/LeaderboardMargin/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 0
+
+[connection signal="pressed" from="CourseSplitter/ButtonSplitter/Buttonsmargin/HBoxContainer/MenuButton/Button" to="." method="NextRound"]
+
+[editable path="CourseSplitter/ButtonSplitter/Buttonsmargin/HBoxContainer/MenuButton"]

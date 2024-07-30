@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvcb5sjq6rjd"]
+
+[ext_resource type="Script" path="res://Scripts/ObjectScript/LeaderboardSeparator.cs" id="1_a5k5y"]
+[ext_resource type="LabelSettings" uid="uid://cekxd7yuhsn6v" path="res://Styling/LableSettings/DriverName.tres" id="1_h4x0y"]
+[ext_resource type="StyleBox" uid="uid://cqr46juoieowu" path="res://Styling/LeaderboardDriverEntry/Styles/LeaderboardEntryBg.tres" id="1_qfo1w"]
+[ext_resource type="LabelSettings" uid="uid://coj7p6qjdqwkj" path="res://Styling/LableSettings/DriverPlace.tres" id="2_brpx0"]
+
+[node name="LeaderboardSeperator" type="MarginContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -26.5
+offset_right = 576.0
+offset_bottom = 26.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 30
+script = ExtResource("1_a5k5y")
+
+[node name="Panel" type="PanelContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Bg" type="Panel" parent="Panel"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("1_qfo1w")
+
+[node name="StatsMargine" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/StatsMargine"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="Panel/StatsMargine/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "place"
+label_settings = ExtResource("2_brpx0")
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="Panel/StatsMargine/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "name"
+label_settings = ExtResource("1_h4x0y")
+horizontal_alignment = 1
+
+[node name="Points" type="Label" parent="Panel/StatsMargine/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "points"
+label_settings = ExtResource("1_h4x0y")
+horizontal_alignment = 1

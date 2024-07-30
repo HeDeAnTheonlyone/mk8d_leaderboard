@@ -1,0 +1,29 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="mk8_rank_list"
+config/version="1.0.0"
+run/main_scene="res://Scenes/MainMenu.tscn"
+config/features=PackedStringArray("4.2", "C#", "Forward Plus")
+config/icon="res://icon.svg"
+
+[autoload]
+
+Manager="res://Scripts/Manager.cs"
+
+[dotnet]
+
+project/assembly_name="mk8d_rank_list"
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://Translation/Translation.de.translation", "res://Translation/Translation.en.translation")

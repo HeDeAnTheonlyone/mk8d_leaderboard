@@ -1,0 +1,87 @@
+[gd_scene load_steps=4 format=3 uid="uid://jeaouqjwtnr1"]
+
+[ext_resource type="Script" path="res://Scripts/ObjectScript/CourseImage.cs" id="1_6isqf"]
+[ext_resource type="Theme" uid="uid://b43wf25olj0yv" path="res://Styling/CourseImage/CourseImage.tres" id="2_2b7c1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ml27r"]
+draw_center = false
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+shadow_color = Color(0, 0, 0, 0.784314)
+shadow_size = 15
+
+[node name="CourseImage" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+script = ExtResource("1_6isqf")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ml27r")
+
+[node name="CoursePreview" type="TextureRect" parent="."]
+layout_mode = 2
+expand_mode = 3
+
+[node name="Label" type="Label" parent="CoursePreview"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_2b7c1")
+text = "Error
+Error"
+horizontal_alignment = 1
+
+[node name="ItemList" type="GridContainer" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+columns = 3
+
+[node name="CupIcon" type="TextureRect" parent="ItemList"]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+expand_mode = 1
+stretch_mode = 4
+
+[node name="Filler1" type="Container" parent="ItemList"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Filler2" type="Container" parent="ItemList"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Filler3" type="Container" parent="ItemList"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Filler4" type="Container" parent="ItemList"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Filler5" type="Container" parent="ItemList"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3

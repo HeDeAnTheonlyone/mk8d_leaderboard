@@ -1,0 +1,162 @@
+[gd_scene load_steps=9 format=3 uid="uid://dto61walxrh54"]
+
+[ext_resource type="Script" path="res://Scripts/ObjectScript/LeaderboardDriverEntry.cs" id="1_cswt0"]
+[ext_resource type="StyleBox" uid="uid://cqr46juoieowu" path="res://Styling/LeaderboardDriverEntry/Styles/LeaderboardEntryBg.tres" id="2_1l0gs"]
+[ext_resource type="LabelSettings" uid="uid://coj7p6qjdqwkj" path="res://Styling/LableSettings/DriverPlace.tres" id="2_je2tr"]
+[ext_resource type="LabelSettings" uid="uid://cekxd7yuhsn6v" path="res://Styling/LableSettings/DriverName.tres" id="3_btn23"]
+[ext_resource type="FontFile" uid="uid://dessb28qc5rts" path="res://Font/QuartzMSRegular.TTF" id="5_3adig"]
+[ext_resource type="LabelSettings" uid="uid://dptxxjbuox256" path="res://Styling/LableSettings/DriverPoints.tres" id="5_x2qxs"]
+[ext_resource type="StyleBox" uid="uid://diycputbbrupd" path="res://Styling/LeaderboardDriverEntry/Styles/PointSeperatorNormal.tres" id="6_0stcd"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_ghpq0"]
+color = Color(1, 1, 1, 1)
+grow_begin = 5.0
+grow_end = 5.0
+thickness = 5
+vertical = true
+
+[node name="DriverEntry" type="PanelContainer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+script = ExtResource("1_cswt0")
+
+[node name="ColorMargine" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 100
+
+[node name="Bg" type="Panel" parent="ColorMargine"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("2_1l0gs")
+
+[node name="StatsMargin" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="StatsMargin"]
+layout_mode = 2
+theme_override_constants/separation = 100
+
+[node name="Place" type="Label" parent="StatsMargin/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+label_settings = ExtResource("2_je2tr")
+horizontal_alignment = 1
+
+[node name="Name" type="Label" parent="StatsMargin/HBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "err"
+label_settings = ExtResource("3_btn23")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PointsPanel" type="PanelContainer" parent="StatsMargin/HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PointsDisplayList" type="HBoxContainer" parent="StatsMargin/HBoxContainer/PointsPanel"]
+layout_mode = 2
+
+[node name="Points1" type="Label" parent="StatsMargin/HBoxContainer/PointsPanel/PointsDisplayList"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "99"
+label_settings = ExtResource("5_x2qxs")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VSeparator1" type="VSeparator" parent="StatsMargin/HBoxContainer/PointsPanel/PointsDisplayList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = ExtResource("6_0stcd")
+
+[node name="Points2" type="Label" parent="StatsMargin/HBoxContainer/PointsPanel/PointsDisplayList"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "99
+"
+label_settings = ExtResource("5_x2qxs")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="StatsMargin/HBoxContainer/PointsPanel/PointsDisplayList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = ExtResource("6_0stcd")
+
+[node name="Points3" type="Label" parent="StatsMargin/HBoxContainer/PointsPanel/PointsDisplayList"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "99"
+label_settings = ExtResource("5_x2qxs")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VSeparator3" type="VSeparator" parent="StatsMargin/HBoxContainer/PointsPanel/PointsDisplayList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = ExtResource("6_0stcd")
+
+[node name="Points4" type="Label" parent="StatsMargin/HBoxContainer/PointsPanel/PointsDisplayList"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "99"
+label_settings = ExtResource("5_x2qxs")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="VSeparator5" type="VSeparator" parent="StatsMargin/HBoxContainer/PointsPanel/PointsDisplayList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 50
+theme_override_styles/separator = SubResource("StyleBoxLine_ghpq0")
+
+[node name="PointsSum" type="Label" parent="StatsMargin/HBoxContainer/PointsPanel/PointsDisplayList"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+text = "99"
+label_settings = ExtResource("5_x2qxs")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="PointsInput" type="LineEdit" parent="StatsMargin/HBoxContainer/PointsPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_selected_color = Color(1, 1, 1, 1)
+theme_override_colors/caret_color = Color(1, 1, 1, 1)
+theme_override_colors/selection_color = Color(0, 0.580392, 1, 1)
+theme_override_fonts/font = ExtResource("5_3adig")
+theme_override_font_sizes/font_size = 36
+alignment = 1
+max_length = 2
+expand_to_text_length = true
+flat = true
+
+[connection signal="focus_entered" from="StatsMargin/HBoxContainer/PointsPanel/PointsInput" to="." method="SelectInput"]
+[connection signal="focus_exited" from="StatsMargin/HBoxContainer/PointsPanel/PointsInput" to="." method="DeselectInput"]
+[connection signal="text_changed" from="StatsMargin/HBoxContainer/PointsPanel/PointsInput" to="." method="CheckInput"]
+[connection signal="text_submitted" from="StatsMargin/HBoxContainer/PointsPanel/PointsInput" to="." method="SubmitInput"]

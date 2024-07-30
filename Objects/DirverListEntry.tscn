@@ -1,0 +1,49 @@
+[gd_scene load_steps=6 format=3 uid="uid://dqjdcpwus6707"]
+
+[ext_resource type="StyleBox" uid="uid://cp7kc1qh2mro7" path="res://Styling/NewPlayerInput/Styles/NewPlayerInputNormal.tres" id="1_uumik"]
+[ext_resource type="Script" path="res://Scripts/ObjectScript/DriverListEntry.cs" id="2_lywsa"]
+[ext_resource type="StyleBox" uid="uid://cqr46juoieowu" path="res://Styling/LeaderboardDriverEntry/Styles/LeaderboardEntryBg.tres" id="3_0ujng"]
+[ext_resource type="LabelSettings" uid="uid://djnx0pj0ygk33" path="res://Styling/LableSettings/DefaultWhite.tres" id="4_te8gr"]
+[ext_resource type="Theme" uid="uid://ck8w67xqtxyfs" path="res://Styling/AddPlayerButton/AddPlayerButton.tres" id="4_ts75d"]
+
+[node name="DirverListEntry" type="PanelContainer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -34.0
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("1_uumik")
+script = ExtResource("2_lywsa")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_styles/normal = ExtResource("3_0ujng")
+text = "Test
+"
+label_settings = ExtResource("4_te8gr")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Add" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("4_ts75d")
+text = "  -  "
+icon_alignment = 1
+vertical_icon_alignment = 0
+
+[connection signal="pressed" from="HBoxContainer/Add" to="." method="RemoveSelfFromList"]

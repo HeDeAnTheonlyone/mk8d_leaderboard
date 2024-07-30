@@ -1,0 +1,4 @@
+# Godot 4+ specific ignores
+.godot/
+.VSCodeCounter
+export_presets.cfg

@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://b43wf25olj0yv"]
+
+[ext_resource type="FontFile" uid="uid://fp3abrmeqr6r" path="res://Font/FOT-NewRodin Pro DB.otf" id="1_wf868"]
+[ext_resource type="StyleBox" uid="uid://3mvrssmty8ri" path="res://Styling/CourseImage/Styling/CourseImageNormal.tres" id="2_3usie"]
+
+[resource]
+default_font = ExtResource("1_wf868")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 1)
+Label/constants/line_spacing = 5
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 0
+Label/constants/shadow_offset_y = 0
+Label/constants/shadow_outline_size = 0
+Label/font_sizes/font_size = 18
+Label/fonts/font = ExtResource("1_wf868")
+Label/styles/normal = ExtResource("2_3usie")

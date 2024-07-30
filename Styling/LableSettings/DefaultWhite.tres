@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://djnx0pj0ygk33"]
+
+[ext_resource type="FontFile" uid="uid://fp3abrmeqr6r" path="res://Font/FOT-NewRodin Pro DB.otf" id="1_ui7ru"]
+
+[resource]
+font = ExtResource("1_ui7ru")
+font_size = 32
+outline_size = 1

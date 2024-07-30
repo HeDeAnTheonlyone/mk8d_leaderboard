@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbsbi3kdjjp6a"]
+
+[ext_resource type="Theme" uid="uid://nuoyxkt1p4no" path="res://Styling/NewPlayerInput/NewPlayerInput.tres" id="1_br0dk"]
+[ext_resource type="StyleBox" uid="uid://cp7kc1qh2mro7" path="res://Styling/NewPlayerInput/Styles/NewPlayerInputNormal.tres" id="2_60epe"]
+[ext_resource type="Theme" uid="uid://ck8w67xqtxyfs" path="res://Styling/AddPlayerButton/AddPlayerButton.tres" id="3_cquh2"]
+
+[node name="PlayerAdder" type="PanelContainer"]
+self_modulate = Color(1, 1, 1, 0)
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Panel" type="Panel" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 2
+theme_override_styles/panel = ExtResource("2_60epe")
+
+[node name="Inpt" type="LineEdit" parent="HBoxContainer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_br0dk")
+placeholder_text = "Spieler Name"
+alignment = 1
+context_menu_enabled = false
+virtual_keyboard_enabled = false
+flat = true
+
+[node name="Add" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = ExtResource("3_cquh2")
+text = "  +  "
+icon_alignment = 1
+vertical_icon_alignment = 0

@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://dptxxjbuox256"]
+
+[ext_resource type="FontFile" uid="uid://dessb28qc5rts" path="res://Font/QuartzMSRegular.TTF" id="1_ng72j"]
+
+[resource]
+font = ExtResource("1_ng72j")
+font_size = 36
+outline_color = Color(0, 0, 0, 1)

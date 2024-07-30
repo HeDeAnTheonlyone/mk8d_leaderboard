@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c7degw2t8qa3m"]
+
+[ext_resource type="FontFile" uid="uid://fp3abrmeqr6r" path="res://Font/FOT-NewRodin Pro DB.otf" id="1_523hq"]
+[ext_resource type="StyleBox" uid="uid://ceush54uqe43p" path="res://Styling/LeaderboardDriverEntry/Styles/LeaderboardDriverEntryPointSelectionNormal.tres" id="2_2nwvu"]
+[ext_resource type="StyleBox" uid="uid://86g2ojbv7dxs" path="res://Styling/LeaderboardDriverEntry/Styles/LeaderboardDriverEntryPointSelectionHover.tres" id="2_ttbxk"]
+
+[resource]
+PopupMenu/colors/font_accelerator_color = Color(0, 0, 0, 1)
+PopupMenu/colors/font_color = Color(0.231373, 0.231373, 0.231373, 1)
+PopupMenu/colors/font_disabled_color = Color(0, 0, 0, 1)
+PopupMenu/colors/font_hover_color = Color(0.231373, 0.231373, 0.231373, 1)
+PopupMenu/colors/font_outline_color = Color(0, 0, 0, 1)
+PopupMenu/colors/font_separator_color = Color(0, 0, 0, 1)
+PopupMenu/colors/font_separator_outline_color = Color(0, 0, 0, 1)
+PopupMenu/constants/h_separation = 10
+PopupMenu/constants/icon_max_width = 0
+PopupMenu/constants/indent = 0
+PopupMenu/constants/item_end_padding = 10
+PopupMenu/constants/item_start_padding = 10
+PopupMenu/constants/outline_size = 0
+PopupMenu/constants/separator_outline_size = 0
+PopupMenu/constants/v_separation = 10
+PopupMenu/font_sizes/font_separator_size = 16
+PopupMenu/font_sizes/font_size = 20
+PopupMenu/fonts/font = ExtResource("1_523hq")
+PopupMenu/fonts/font_separator = null
+PopupMenu/icons/checked = null
+PopupMenu/icons/checked_disabled = null
+PopupMenu/icons/radio_checked = null
+PopupMenu/icons/radio_checked_disabled = null
+PopupMenu/icons/radio_unchecked = null
+PopupMenu/icons/radio_unchecked_disabled = null
+PopupMenu/icons/submenu = null
+PopupMenu/icons/submenu_mirrored = null
+PopupMenu/icons/unchecked = null
+PopupMenu/icons/unchecked_disabled = null
+PopupMenu/styles/hover = ExtResource("2_ttbxk")
+PopupMenu/styles/labeled_separator_left = ExtResource("2_2nwvu")
+PopupMenu/styles/labeled_separator_right = ExtResource("2_2nwvu")
+PopupMenu/styles/panel = ExtResource("2_2nwvu")
+PopupMenu/styles/separator = ExtResource("2_2nwvu")
